@@ -1,0 +1,29 @@
+#initialization
+import turtle
+import random
+t=turtle.Turtle()
+t.colormode(255)
+t.speed(40)
+
+#functions
+def randomDot():
+    r=random.randint(0,255)
+    g=random.randint(0,255)
+    b=random.randint(0,255)
+    t.color(r,g,b)
+    t.begin_fill()
+    s=random.randint(0,150)
+    t.circle(s)
+    t.end_fill()
+    t.color(r,g,b)
+    print(r)
+    print(g)
+    print(b)
+#main
+for i in range(50):
+    t.penup()
+    x=random.randint(-200,200)
+    y=random.randint(-200,200)
+    t.goto(x,y)
+    t.pendown()
+    randomDot()
